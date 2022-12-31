@@ -7,5 +7,6 @@
     <Compile Include="src/Utils.fs" />
     <Compile Include="src/Day1.fs" />
     <Compile Include="src/Day2.fs" />
+    <Compile Include="src/Day3.fs" />
   </ItemGroup>
 </Project>
