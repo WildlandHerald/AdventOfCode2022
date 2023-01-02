@@ -5,9 +5,17 @@ module String =
 
     let halves (s: string) =
         let halfLength = String.length s / 2
-        s[halfLength..], s[..halfLength - 1]
+        s[halfLength..], s[.. halfLength - 1]
 
     let toSet (s: string) = s |> Seq.toList |> Set.ofList
+
+    let filteri predicate (str: string) =
+        str
+        |> Seq.toList
+        |> List.indexed
+        |> List.filter (fun (a, b) -> predicate a b)
+        |> List.map snd
+        |> System.String.Concat
 
 module Tuple2 =
     let map (f: 'a -> 'b) (a: 'a, b: 'a) = f a, f b
